@@ -19,6 +19,9 @@
 
         <activity android:name=".SetSpanActivity" />
         <activity android:name=".SpanStyleActivity" />
+        <activity android:name=".TextSurroundActivity" />
+        <activity android:name=".RainbowSpanActivity" />
+
     </application>
 
 </manifest>

@@ -14,6 +14,8 @@ import android.text.style.ImageSpan
 import android.text.style.RelativeSizeSpan
 import android.text.style.StrikethroughSpan
 import android.text.style.StyleSpan
+import android.text.style.SubscriptSpan
+import android.text.style.SuperscriptSpan
 import android.text.style.TypefaceSpan
 import android.text.style.UnderlineSpan
 import kotlinx.android.synthetic.main.activity_span_style.tvAbsolute
@@ -23,6 +25,8 @@ import kotlinx.android.synthetic.main.activity_span_style.tvImage
 import kotlinx.android.synthetic.main.activity_span_style.tvRelative
 import kotlinx.android.synthetic.main.activity_span_style.tvStrikethrough
 import kotlinx.android.synthetic.main.activity_span_style.tvStyle
+import kotlinx.android.synthetic.main.activity_span_style.tvSubScript
+import kotlinx.android.synthetic.main.activity_span_style.tvSuperScript
 import kotlinx.android.synthetic.main.activity_span_style.tvTypeface
 import kotlinx.android.synthetic.main.activity_span_style.tvUnderline
 
@@ -41,6 +45,23 @@ class SpanStyleActivity : AppCompatActivity() {
         strikeThrough()
         underline()
         image()
+        superScript()
+        subScript()
+    }
+
+    private fun superScript() {
+        val superScript = "N2"
+        val sp = SpannableString(superScript)
+        sp.setSpan(SuperscriptSpan(), 1, superScript.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        tvSuperScript.text = sp
+    }
+
+
+    private fun subScript() {
+        val subscript = "H2O"
+        val sp = SpannableString(subscript)
+        sp.setSpan(SubscriptSpan(), 1, subscript.length - 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        tvSubScript.text = sp
     }
 
 
