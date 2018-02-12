@@ -7,6 +7,7 @@ import kotlinx.android.synthetic.main.activity_main.btRainbow
 import kotlinx.android.synthetic.main.activity_main.btSetSpan
 import kotlinx.android.synthetic.main.activity_main.btSpanStyle
 import kotlinx.android.synthetic.main.activity_main.btTextRound
+import kotlinx.android.synthetic.main.activity_main.btType
 
 
 class MainActivity : AppCompatActivity() {
@@ -35,6 +36,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btType.setOnClickListener {
+            val intent = Intent(this, TypeWriterSpanActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 }

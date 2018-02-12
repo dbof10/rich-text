@@ -21,6 +21,7 @@
         <activity android:name=".SpanStyleActivity" />
         <activity android:name=".TextSurroundActivity" />
         <activity android:name=".RainbowSpanActivity" />
+        <activity android:name=".TypeWriterSpanActivity"/>
 
     </application>
 
